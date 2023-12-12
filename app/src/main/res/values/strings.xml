@@ -8,4 +8,8 @@
     <string name="lose">You lose!</string>
     <string name="time_remaining_format">
       Time remaining: %.1f seconds</string>
+
+    <string name="editText_User_hint">Ingresar el usuario</string>
+    <string name="editText_Password_hint">Ingresar contraseña</string>
+    <string name="button_Ingresar">Ingresar</string>
 </resources>
