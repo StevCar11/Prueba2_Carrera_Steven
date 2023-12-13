@@ -30,7 +30,7 @@ public class Login extends AppCompatActivity {
         editTextPassword1.setText(savedPassword);
     }
 
-    public void onClickButtonOkGCKE(View view) {
+    public void onClickButtonIngresar(View view) {
         DatosUser datosUser = new DatosUser(this);
         String user1 = editTextUser1.getText().toString();
         String password1 = editTextPassword1.getText().toString();

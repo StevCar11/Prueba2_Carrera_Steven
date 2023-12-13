@@ -34,8 +34,10 @@
         android:id="@+id/button_Ingresar"
         android:layout_width="333dp"
         android:layout_height="45dp"
+        android:onClick="onClickButtonIngresar"
         android:text="@string/button_Ingresar"
         tools:ignore="HardcodedText,MissingConstraints,TouchTargetSizeCheck,VisualLintButtonSize"
         tools:layout_editor_absoluteX="39dp"
         tools:layout_editor_absoluteY="106dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
