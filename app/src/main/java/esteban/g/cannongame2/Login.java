@@ -31,11 +31,11 @@ public class Login extends AppCompatActivity {
     }
 
     public void onClickButtonOkGCKE(View view) {
-        DatosGCKE datosGCKE = new DatosGCKE(this);
-        String userGCKE = editTextUserGCKE.getText().toString();
-        String passwordGCKE = editTextPasswordGCKE.getText().toString();
+        DatosUser datosGCKE = new DatosUser(this);
+        String userGCKE = editTextUser1.getText().toString();
+        String passwordGCKE = editTextPassword1.getText().toString();
 
-        EntidadGCKE entidadGCKE = new EntidadGCKE(userGCKE, passwordGCKE);
+        EntidadUser entidadGCKE = new EntidadUser(userGCKE, passwordGCKE);
 
         long count = datosGCKE.insert(entidadGCKE);
 

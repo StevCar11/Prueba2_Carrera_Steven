@@ -5,15 +5,15 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
 public class DatosUser {
-    private DataBaseManagerGCKE dataBaseManager;
+    private DataBaseManagerUser dataBaseManager;
     private SQLiteDatabase sqLiteDatabase;
     private Context context;
 
-    public DatosGCKE(Context context) {
+    public DatosUser(Context context) {
         this.context = context;
     }
     private void open(boolean openMode) {
-        dataBaseManager = new DataBaseManagerGCKE(context, "SEXTO_DB", null, 1);
+        dataBaseManager = new DataBaseManagerUser(context, "SEXTO_DB", null, 1);
 
         if (openMode==true) {
             sqLiteDatabase = dataBaseManager.getWritableDatabase();
@@ -23,7 +23,7 @@ public class DatosUser {
             sqLiteDatabase = dataBaseManager.getReadableDatabase();
         }
     }
-    public  long insert(EntidadGCKE entidadGCKE) {
+    public  long insert(EntidadUser entidadGCKE) {
         open(true);
         long count = 0;
 
@@ -31,7 +31,7 @@ public class DatosUser {
             ContentValues values = new ContentValues();
 
             values.put("NAME", entidadGCKE.getName());
-            values.put("PASSWORD", entidadGCKE.getPasswors());
+            values.put("PASSWORD", entidadGCKE.getPassword());
 
             count = sqLiteDatabase.insert("USERS", null, values);
         }
