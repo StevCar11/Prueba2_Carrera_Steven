@@ -31,19 +31,19 @@ public class Login extends AppCompatActivity {
     }
 
     public void onClickButtonOkGCKE(View view) {
-        DatosUser datosGCKE = new DatosUser(this);
-        String userGCKE = editTextUser1.getText().toString();
-        String passwordGCKE = editTextPassword1.getText().toString();
+        DatosUser datosUser = new DatosUser(this);
+        String user1 = editTextUser1.getText().toString();
+        String password1 = editTextPassword1.getText().toString();
 
-        EntidadUser entidadGCKE = new EntidadUser(userGCKE, passwordGCKE);
+        EntidadUser entidadUser = new EntidadUser(user1, password1);
 
-        long count = datosGCKE.insert(entidadGCKE);
+        long count = datosUser.insert(entidadUser);
 
         if (count == 0) {
-            Toast.makeText(this, "Registro no insertado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Este registro no fue almacenado", Toast.LENGTH_SHORT).show();
         }
         else {
-            Toast.makeText(this, "Registro insertado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Este registro fue almacenado", Toast.LENGTH_SHORT).show();
         }
     }
 
